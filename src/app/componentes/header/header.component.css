@@ -115,7 +115,8 @@ h1{
         left: 0;
         right: 0;
         width: 100%;
-        
+        display: flex;
+        align-items: center;
         transition: 0.5s;
         overflow: hidden;
         z-index: 1;
@@ -138,7 +139,7 @@ h1{
     .nav-bar ul li a{
         margin-bottom: 20px;
     }
-    .hola{
+    .menuactivo{
         background-color: var(--amarillo);
         transition: 0.5s;
      }
