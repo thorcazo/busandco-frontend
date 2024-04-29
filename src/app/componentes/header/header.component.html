@@ -8,12 +8,13 @@
                </div>      
                <nav class="nav-bar" [class.active]="activarMenu">
                      <ul>
-                            <li><a routerLink="/origen-destino" routerLinkActive="active" href="#">Origen - Destino</a></li>
-                            <li><a routerLink="/lineas" routerLinkActive="active" href="#">Líneas</a></li>
-                            <li><a routerLink="/noticias" routerLinkActive="active" href="#">Noticias</a></li>
-                            <li><a routerLink="/incidencias" routerLinkActive="active" href="#">Incidencias</a></li>
-                            <li><a routerLink="/contacto" routerLinkActive="active" href="#">Contacto</a></li>
+                            <li><a (click)="setTitle('Origen - Destino')" routerLink="/origen-destino" routerLinkActive="active" href="#">Origen - Destino</a></li>
+                            <li><a (click)="setTitle('Líneas')" routerLink="/lineas" routerLinkActive="active" href="#">Líneas</a></li>
+                            <li><a (click)="setTitle('Noticias')" routerLink="/noticias" routerLinkActive="active" href="#">Noticias</a></li>
+                            <li><a (click)="setTitle('Incidencias')" routerLink="/incidencias" routerLinkActive="active" href="#">Incidencias</a></li>
+                            <li><a (click)="setTitle('Contacto')" routerLink="/contacto" routerLinkActive="active" href="#">Contacto</a></li>
                      </ul>
                </nav>       
        </header>
+       <h1>{{title}}</h1>
 </section>

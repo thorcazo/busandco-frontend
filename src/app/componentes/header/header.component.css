@@ -1,10 +1,13 @@
 
 .cabecera{
     width: 100%;
-    min-height: 300px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 29%, rgba(255, 255, 255, 0) 44%),  url('../../../assets/imagenes/cabecera.jpg');
+    min-height: 420px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 29%, rgba(255, 255, 255, 0) 44%),  url('../../../assets/imagenes/cabecera-copia.jpg');
     background-size:cover;
     color: var(--azul-oscuro);
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 4fr 2fr;
 }
 header{
     width: 100%;
@@ -14,9 +17,14 @@ header{
     justify-content: space-between;
     padding: 0 100px;
     color: var(--azul-oscuro);
+    grid-column: 1 / 9;
+}
+h1{
+    grid-column: 2 / 9;
+    font-size: 38px;
 }
 .logo{
-    font-size: 28px;
+    font-size: 52px;
     font-weight: bold;
     color: var(--azul-oscuro);
 }

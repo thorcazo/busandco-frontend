@@ -1,1 +1,23 @@
-<p>lineas works!</p>
+<section class="main lineas">
+    <div class="card cont-filtros">
+        <h3>Filtros</h3>
+        <section class="filtros">
+            <div class="cont nombre">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="" placeholder="Introduce el nombre">
+            </div>
+            <div class="cont empresa">
+                <label for="empresa">Empresa</label>
+                <select name="empresa" id="">
+                    <option value="1">Empresa 1</option>
+                    <option value="2">Empresa 2</option>
+                    <option value="3">Empresa 3</option>
+                </select>
+            </div>
+            <button>Borrar filtros</button>
+        </section>
+    </div>
+    @for (linea of lineas; track linea.id) {
+        <app-linea [linea]="linea"/>
+    }
+</section>

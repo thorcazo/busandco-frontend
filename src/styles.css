@@ -29,7 +29,6 @@
     .boton{
         height: 48px;
         font-weight:600;
-        font-size: 24px;
         font-family: Urbanist;
         color: var(--azul-oscuro);
         background-color: var(--amarillo);
@@ -43,8 +42,30 @@
         background-color: #06D6A0;
         transition: background-color 0.3s;
     }
+    input, select{
+        box-sizing: border-box;
+        background-color: var(--gris);
+        border: 0;
+        border-radius: 10px;
+        height: 48px;
+        min-width: 200px;
+        padding: 8px;
+        font-family: Urbanist;
+        font-size: 16px;
+        color: var(--azul-oscuro);
+    }
+    input:focus, select:focus{
+        outline: none;
+    }
     main{
         background-color: var(--gris);
         color: var(--azul-oscuro);
+    }
+    .card{
+        background-color: var(--blanco);
+        border-radius: 10px;
+        box-shadow: 4px 4px 4px rgba(207, 179, 179, 0.25);
+        padding: 20px;
+        margin: 0 20px 20px 20px;
     }
 }

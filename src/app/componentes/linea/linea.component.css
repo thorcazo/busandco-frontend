@@ -1,0 +1,18 @@
+.linea{
+    display: flex;
+    justify-content: space-between;
+    min-height: 120px;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.right{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.boton{
+    font-size: 16px;
+}
