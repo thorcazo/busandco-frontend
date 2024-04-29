@@ -1,0 +1,5 @@
+<section class="main contacto">
+    @for (empresa of empresas; track empresa.id) {
+        <app-tarjeta-contacto [empresa]="empresa"/>
+    }
+</section>

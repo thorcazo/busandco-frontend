@@ -1,0 +1,5 @@
+<section class="main noticias">
+    @for (noticia of noticias; track noticia.id) {
+        <app-noticia [noticia]="noticia"/>
+    }
+</section>

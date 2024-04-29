@@ -1,0 +1,23 @@
+<section class="buscador">
+    <div class="cont origen">
+        <label for="origen">Origen</label>
+        <input type="text" name="origen" id="" placeholder="Introduce el origen">
+    </div>
+    <div class="cont destino">
+        <label for="destino">Destino</label>
+        <input type="text" name="destino" id="" placeholder="Introduce el destino">
+    </div>
+    <div class="cont fecha">
+        <label for="fecha">Fecha</label>
+        <input type="date" name="fecha" id="">
+    </div>
+    <div class="cont empresa">
+        <label for="empresa">Empresa</label>
+        <select name="empresa" id="">
+            @for (empresa of empresas; track empresa.id) {
+                <option value="{{empresa.id}}">{{empresa.nombre}}</option>
+            }
+        </select>
+    </div>
+    <button class="boton">Buscar</button>
+</section>

@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    /*Paleta de colores*/
+    --amarillo: #FFD166;
+    --verde: #06D6A0;
+    --azul-claro: #118AB2;
+    --azul-oscuro: #073B4C;
+    --blanco: #FFF;
+    --negro: #000;
+    --gris: #EEE;
+
+    /*Fuentes*/
+    @font-face {
+        font-family: Urbanist;
+        src: url('assets/fuentes/Urbanist-VariableFont_wght.ttf') format('ttf'),
+             url('assets/fuentes/Urbanist-Italic-VariableFont_wght.ttf') format('ttf');
+    }
+    body {
+        font-family: Urbanist, sans-serif;
+    }
+
+    /*Reseteo CSS*/
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .boton{
+        height: 48px;
+        font-weight:600;
+        font-size: 24px;
+        font-family: Urbanist;
+        color: var(--azul-oscuro);
+        background-color: var(--amarillo);
+        border: 0;
+        border-radius: 10px;
+        padding: 0 24px;
+        transition: background-color 0.3s;
+    }
+    .boton:hover{
+        cursor:pointer;
+        background-color: #06D6A0;
+        transition: background-color 0.3s;
+    }
+    main{
+        background-color: var(--gris);
+        color: var(--azul-oscuro);
+    }
+}
