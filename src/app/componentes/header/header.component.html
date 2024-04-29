@@ -1,5 +1,5 @@
 <section class="cabecera">
-       <header>
+       <header [class.hola]="activarMenu">
               <div class="logo">Bus&Co</div>
                <div (click)="alternarMenu()" class="bars">
                      <div [class.selected1]="activarMenu" [class.line]="!activarMenu"></div>
@@ -8,11 +8,11 @@
                </div>      
                <nav class="nav-bar" [class.active]="activarMenu">
                      <ul>
-                            <li><a (click)="setTitle('Origen - Destino')" routerLink="/origen-destino" routerLinkActive="active" href="#">Origen - Destino</a></li>
-                            <li><a (click)="setTitle('Líneas')" routerLink="/lineas" routerLinkActive="active" href="#">Líneas</a></li>
-                            <li><a (click)="setTitle('Noticias')" routerLink="/noticias" routerLinkActive="active" href="#">Noticias</a></li>
-                            <li><a (click)="setTitle('Incidencias')" routerLink="/incidencias" routerLinkActive="active" href="#">Incidencias</a></li>
-                            <li><a (click)="setTitle('Contacto')" routerLink="/contacto" routerLinkActive="active" href="#">Contacto</a></li>
+                            <li><a (click)="setTitle('Origen - Destino'); alternarMenu()" routerLink="/origen-destino" routerLinkActive="active" href="#">Origen - Destino</a></li>
+                            <li><a (click)="setTitle('Líneas'); alternarMenu()" routerLink="/lineas" routerLinkActive="active" href="#">Líneas</a></li>
+                            <li><a (click)="setTitle('Noticias'); alternarMenu()" routerLink="/noticias" routerLinkActive="active" href="#">Noticias</a></li>
+                            <li><a (click)="setTitle('Incidencias'); alternarMenu()" routerLink="/incidencias" routerLinkActive="active" href="#">Incidencias</a></li>
+                            <li><a (click)="setTitle('Contacto'); alternarMenu()" routerLink="/contacto" routerLinkActive="active" href="#">Contacto</a></li>
                      </ul>
                </nav>       
        </header>

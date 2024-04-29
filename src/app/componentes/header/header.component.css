@@ -2,12 +2,14 @@
 .cabecera{
     width: 100%;
     min-height: 420px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 29%, rgba(255, 255, 255, 0) 44%),  url('../../../assets/imagenes/cabecera-copia.jpg');
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.0) 0%, rgba(255, 255, 255, 0.5) 100%),  url('../../../assets/imagenes/cabecera-copia.jpg');
     background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--azul-oscuro);
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 4fr 2fr;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 4fr 3fr;
 }
 header{
     width: 100%;
@@ -17,10 +19,11 @@ header{
     justify-content: space-between;
     padding: 0 100px;
     color: var(--azul-oscuro);
-    grid-column: 1 / 9;
+    grid-column: 1 / 11;
+    transition: background-color 0.5s;
 }
 h1{
-    grid-column: 2 / 9;
+    grid-column: 2 / 11;
     font-size: 38px;
 }
 .logo{
@@ -34,25 +37,34 @@ h1{
 .nav-bar ul {
     display: flex;
     list-style: none;
+    justify-items: flex-end;
+    gap: 40px;
 }
 .nav-bar ul li a{
     display: block;
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: 600;
     text-decoration: none;
-    padding: 10px 25px;
-    border-radius: 15px;
+
     transition: 0.2s;
     margin: 0 5px;
     color: var(--azul-oscuro);
 }
 .nav-bar ul li a:hover{
-   background-color: var(--amarillo);
+   color: var(--azul-claro);
 }
 .nav-bar ul li a.active{
-    background-color: var(--amarillo);
+    color: var(--azul-claro);
  }
+ 
 
-@media(max-width: 1100px){
+@media(max-width: 1200px){
+    .cabecera{
+        min-height: 300px;
+    }
+    h1{
+        font-size: 32px;
+    }
     header{
         padding: 0 30px;
     }
@@ -61,37 +73,40 @@ h1{
         cursor: pointer;
     }
     .selected1{
-        width: 42px;
-        height: 8px;
-        background-color: var(--azul-oscuro);
-        margin: 6px 0px;
-        border-radius: 4px;
-        transition: 0.3s;
-    }
-    .selected2{
-        width: 40px;
+        width: 38px;
         height: 6px;
         background-color: var(--azul-oscuro);
-        margin: 6px 0px;
+        margin: 6px 0px 6px auto;
         border-radius: 4px;
-        transition: 0.3s;
+        transition: 0.5s;
+    }
+    .selected2{
+        width: 42px;
+        height: 6px;
+        background-color: var(--azul-oscuro);
+        margin: 6px 0px 6px auto;
+        border-radius: 4px;
+        transition: 0.5s;
+        
     }
     .selected3{
+
         width: 38px;
-        height: 4px;
+        height: 6px;
         background-color: var(--azul-oscuro);
-        margin: 6px 0px;
+        margin: 6px 0px 6px auto;
         border-radius: 4px;
-        transition: 0.3s;
+        transition: 0.5s;
     }
     .bars .line{
         width: 36px;
         height: 5px;
         background-color: var(--azul-oscuro);
-        margin: 6px 0px;
+        margin: 6px 0px 6px auto;
         border-radius: 4px;
-        transition: 0.3s;
+        transition: 0.5s;
     }
+
    
     .nav-bar{
         height: 0px;
@@ -99,19 +114,20 @@ h1{
         top: 80px;
         left: 0;
         right: 0;
-        width: 100vw;
-        background-color: var(--amarillo);
+        width: 100%;
+        
         transition: 0.5s;
         overflow: hidden;
         z-index: 1;
     }
     .nav-bar.active{
-        height: 450px;
+        height: 340px;
+        background-color: var(--amarillo);
     }
     .nav-bar ul{
         display: block;
         width: fit-content;
-        margin: 80px auto 0 auto;
+        margin: 20px auto 0 auto;
         text-align: center;
         transition: 0.5s;
         opacity: 0;
@@ -121,5 +137,43 @@ h1{
     }
     .nav-bar ul li a{
         margin-bottom: 20px;
+    }
+    .hola{
+        background-color: var(--amarillo);
+        transition: 0.5s;
+     }
+}
+@media(max-width: 900px){
+    .cabecera{
+        min-height: 200px;
+    }
+    .logo{
+        font-size: 42px;
+    }
+    h1{
+        font-size: 28px;
+    }
+}
+@media(max-width: 600px){
+    .cabecera{
+        min-height: 150px;
+    }
+    .logo{
+        font-size: 36px;
+    }
+    h1{
+        font-size: 22px;
+    }
+}
+@media(min-width: 1700px){
+    .cabecera{
+        min-height: 420px;
+        background-position-y:top
+    }
+    .logo{
+        font-size: 62px;
+    }
+    h1{
+        font-size: 42px;
     }
 }
