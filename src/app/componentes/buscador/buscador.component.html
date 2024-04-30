@@ -2,6 +2,11 @@
     <div class="cont origen">
         <label for="origen">Origen</label>
         <input type="text" name="origen" id="" placeholder="Introduce el origen">
+        <ul>
+            @for (parada of paradas; track parada.id) {
+                <li>{{parada.nombre}}</li>
+            }
+        </ul>
     </div>
     <div class="cont destino">
         <label for="destino">Destino</label>

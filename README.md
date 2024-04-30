@@ -1,3 +1,15 @@
+# PASOS PARA HACER COMMIT, PUSH, ETC
+
+Siempre, antes de hacer nada, hacer git pull origin main (traer la versión más reciente)
+Cuando haces cambios:
+    - git add .
+    - git commit -m "Título del commit"
+    - git pull origin main (volvemos a traer la versión más reciente por si alguien ha hecho cambios a la vez que nosotros)
+    - git push origin main (subimos nuestros cambios)
+
+
+
+
 # BusAndCo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.

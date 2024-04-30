@@ -8,11 +8,11 @@
                </div>      
                <nav class="nav-bar" [class.active]="activarMenu">
                      <ul>
-                            <li><a (click)="setTitle('Origen - Destino'); alternarMenu()" routerLink="/origen-destino" routerLinkActive="active" href="#">Origen - Destino</a></li>
-                            <li><a (click)="setTitle('Líneas'); alternarMenu()" routerLink="/lineas" routerLinkActive="active" href="#">Líneas</a></li>
-                            <li><a (click)="setTitle('Noticias'); alternarMenu()" routerLink="/noticias" routerLinkActive="active" href="#">Noticias</a></li>
-                            <li><a (click)="setTitle('Incidencias'); alternarMenu()" routerLink="/incidencias" routerLinkActive="active" href="#">Incidencias</a></li>
-                            <li><a (click)="setTitle('Contacto'); alternarMenu()" routerLink="/contacto" routerLinkActive="active" href="#">Contacto</a></li>
+                            <li><a (click)="setTitle('Origen - Destino'); this.activarMenu = false" routerLink="/origen-destino" routerLinkActive="active" href="#">Origen - Destino</a></li>
+                            <li><a (click)="setTitle('Líneas'); this.activarMenu = false" routerLink="/lineas" routerLinkActive="active" href="#">Líneas</a></li>
+                            <li><a (click)="setTitle('Noticias'); this.activarMenu = false" routerLink="/noticias" routerLinkActive="active" href="#">Noticias</a></li>
+                            <li><a (click)="setTitle('Incidencias'); this.activarMenu = false" routerLink="/incidencias" routerLinkActive="active" href="#">Incidencias</a></li>
+                            <li><a (click)="setTitle('Contacto'); this.activarMenu = false" routerLink="/contacto" routerLinkActive="active" href="#">Contacto</a></li>
                      </ul>
                </nav>       
        </header>

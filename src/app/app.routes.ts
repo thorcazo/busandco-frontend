@@ -11,7 +11,8 @@ export const routes: Routes = [
     {
         path: '',
         redirectTo: 'origen-destino',
-        pathMatch: 'full'
+        pathMatch: 'full',
+
     },
     {
         path: 'origen-destino',
@@ -24,7 +25,7 @@ export const routes: Routes = [
         title: 'Líneas - Bus&Co',
     },
     {
-        path: 'detalle-linea',
+        path: 'detalle-linea/:id',
         component: LineaDetalleComponent,
         title: 'Detalle Linea - Bus&Co',
     },

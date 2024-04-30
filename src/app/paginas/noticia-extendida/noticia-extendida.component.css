@@ -1,0 +1,27 @@
+.noticia-extendida{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.noticia{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: flex-start;
+    padding: 40px;
+    gap: 20px;
+}
+h2{
+    font-size: 36px;
+    
+}
+.descripcion{
+    font-size: 22px;
+    font-weight: 600;
+}
+img{
+    justify-self: center;
+    width: 30%;
+    border-radius: 10px;
+}
+.cuerpo{
+    font-size: 20px;
+}

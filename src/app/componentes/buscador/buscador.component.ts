@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-buscador',
@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './buscador.component.css'
 })
 export class BuscadorComponent {
+  @Input() paradas:any
+  
   empresas = [
     {
       id: 1,

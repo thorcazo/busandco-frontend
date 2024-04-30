@@ -9,5 +9,7 @@ import { BuscadorComponent } from '../../componentes/buscador/buscador.component
   styleUrl: './origen-destino.component.css'
 })
 export class OrigenDestinoComponent {
-  
+  paradas = [
+    
+  ]
 }

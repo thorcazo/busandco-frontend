@@ -16,7 +16,11 @@ h2{
     margin: 0;
     padding: 0;
 }
-h2:hover{
+a{
+    text-decoration: none;
+    color: var(--azul-oscuro);
+}
+a:hover{
     color: var(--azul-claro);
     cursor: pointer;
 }
