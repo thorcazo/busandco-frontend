@@ -16,3 +16,8 @@
 .boton{
     font-size: 16px;
 }
+@media (max-width: 575px){
+    .empresa{
+        display: none;
+    }
+}

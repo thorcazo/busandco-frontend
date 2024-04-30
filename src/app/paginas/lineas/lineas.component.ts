@@ -19,7 +19,7 @@ export class LineasComponent {
     { id: 7, nombre: 'Linea 7', descripcion: 'Descripción de la línea 7', empresa: 'Empresa G' },
     { id: 8, nombre: 'Linea 8', descripcion: 'Descripción de la línea 8', empresa: 'Empresa H' },
     { id: 9, nombre: 'Linea 9', descripcion: 'Descripción de la línea 9', empresa: 'Empresa I' },
-    { id: 10, nombre: 'Linea 10', descripcion: 'Descripción de la línea 10', empresa: 'Empresa J' },
+    { id: 10, nombre: 'Linea 10', descripcion: 'Descripción de la línea 10', empresa: 'Empresa J' }
   ];
   
 }

@@ -24,3 +24,6 @@ a:hover{
     color: var(--azul-claro);
     cursor: pointer;
 }
+p{
+    font-size: 18px;
+}

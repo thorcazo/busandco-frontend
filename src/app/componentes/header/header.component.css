@@ -166,6 +166,21 @@ h1{
         font-size: 22px;
     }
 }
+@media(max-width: 400px){
+   .cabecera{
+    
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.5) 100%),  url('../../../assets/imagenes/cabecera-copia.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+    .logo{
+        font-size: 28px;
+    }
+    h1{
+        font-size: 18px;
+    }
+}
 @media(min-width: 1700px){
     .cabecera{
         min-height: 420px;

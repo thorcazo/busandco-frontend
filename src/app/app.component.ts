@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationEnd, RouterOutlet, Router } from '@angular/router';
 import { FooterComponent } from './componentes/footer/footer.component';
