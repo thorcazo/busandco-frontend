@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-linea',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './linea.component.html',
   styleUrl: './linea.component.css'
 })

@@ -4,28 +4,29 @@
         <section class="filtros">
             <div class="cont nombre">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="" placeholder="Introduce el nombre">
+                <input [(ngModel)]="nombre" type="text" name="nombre" id="" placeholder="Introduce el nombre">
             </div>
             <div class="cont empresa">
                 <label for="empresa">Empresa</label>
-                <select name="empresa" id="">
-                    <option value="1">Empresa 1</option>
-                    <option value="2">Empresa 2</option>
-                    <option value="3">Empresa 3</option>
+                <select  [(ngModel)]="empresa" name="empresa" id="">
+                    <option value="Todas" selected>Todas</option>
+                    <option value="TmpMurcia">TmpMurcia</option>
+                    <option value="Transportes de murcia">Transportes de murcia</option>
+                    <option value="Movibus">Movibus</option>
                 </select>
             </div>
             <div class="cont tipo">
                 <label for="tipo">Tipo</label>
-                <select name="tipo" id="">
-                    <option value="1">Todas</option>
-                    <option value="1">Urbanas</option>
-                    <option value="2">Interurbanas</option>
+                <select [(ngModel)]="tipo" name="tipo" id="">
+                    <option value="Todas" selected>Todas</option>
+                    <option value="Urbana">Urbanas</option>
+                    <option value="Interurbana">Interurbanas</option>
                 </select>
             </div>
-            <button>Borrar filtros</button>
+            <button (click)="borrarFlitros()">Borrar filtros</button>
         </section>
     </div>
-    @for (linea of lineas; track linea.id) {
+    @for (linea of lineas | nombrelineas:nombre | empresalineas:empresa |tipolineas:tipo; track linea.id) {
         <app-linea [linea]="linea"/>
     }
 </section>

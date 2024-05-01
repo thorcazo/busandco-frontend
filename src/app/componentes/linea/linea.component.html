@@ -5,7 +5,7 @@
     </div>
     <div class="right">
         <p class="empresa">{{linea.empresa}}</p>
-        <button class="boton">
+        <button [routerLink]="['/detalle-linea', linea.id]" routerLinkActive="router-link-active"  class="boton">
             Ver detalles
         </button>
     </div>
