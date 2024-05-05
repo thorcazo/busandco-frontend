@@ -1,18 +1,30 @@
-<main class="detalle-linea">
+<main class="main detalle-linea">
     <section class="card cabecera-linea">
         <div class="informacion">
             <header>
-                <h2>{{linea.nombre}}</h2>
-                <select name="sublinea" id="">
-                    <option value="44A">44 A</option>
-                    <option value="44B">44 B</option>
-                    <option value="44C">44 C</option>
-                </select>
+                <div class="linea">
+                    <h2>{{linea.nombre}}</h2>
+                    <div class="sublinea">
+                        <label for="sublinea">Sublínea</label>
+                        <select name="sublinea" id="">
+                            <option value="44A">44 A</option>
+                            <option value="44B">44 B</option>
+                            <option value="44C">44 C</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="empresa">
+                    <p>TMP Murcia</p>
+                    <img src="assets/imagenes/logoTMP.png" alt="">
+                </div>
             </header>
             <div class="direccion">
                 <p>{{linea.descripcion}}</p>
                 <button class="boton">Cambio de dirección</button>
             </div>
         </div>
+        <app-mapa class="mapa"/>
     </section>
+    <app-paradas></app-paradas>
+    <app-horarios></app-horarios>
 </main>

@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ParadasComponent } from '../../componentes/paradas/paradas.component';
+import { HorariosComponent } from '../../componentes/horarios/horarios.component';
+import { MapaComponent } from '../../componentes/mapa/mapa.component';
 
 @Component({
   selector: 'app-linea-detalle',
   standalone: true,
-  imports: [],
+  imports: [ParadasComponent, HorariosComponent, MapaComponent],
   templateUrl: './linea-detalle.component.html',
   styleUrl: './linea-detalle.component.css'
 })

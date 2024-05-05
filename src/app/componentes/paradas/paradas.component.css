@@ -1,0 +1,44 @@
+.paradas{
+    position: relative;
+    top: -50px;
+    height: auto;
+}
+
+table{
+    width: 100%;
+}
+thead{
+    border-radius: 10px;
+    background-color: #06d69e52;
+}
+thead tr{
+    height: 50px;
+   
+    border-radius: 10px;
+}
+thead tr th:nth-child(1){
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+thead tr th:nth-child(4){
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+tbody tr td{
+    padding: 6px;
+    text-align: center;
+}
+.boton{
+    height: auto;
+    padding: 4px 40px;
+}
+.mapa {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden; /* Asegura que nada se salga del contenedor */
+    border-radius: 10px;
+}
+
+.mapa img {
+    object-fit: cover; /* La imagen se redimensionará para cubrir todo el contenedor, manteniendo su aspecto */
+}
