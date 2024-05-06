@@ -23,8 +23,13 @@
                 <button class="boton">Cambio de dirección</button>
             </div>
         </div>
-        <app-mapa class="mapa"/>
+        <app-mapa class="mapa1"/>
     </section>
-    <app-paradas></app-paradas>
-    <app-horarios></app-horarios>
+    @if(getMostrarHorarios()){
+        <app-horarios class="horarios"/>
+    }
+    @else {
+        <app-paradas class="paradas"/>
+    }
+    <app-mapa class="mapa2"/>
 </main>

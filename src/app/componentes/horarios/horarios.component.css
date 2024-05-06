@@ -1,0 +1,47 @@
+.cabecera{
+    background-color: #06d69e52;
+    height: auto;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+.tipo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.tipo p{
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.horarios{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    row-gap: 20px;
+}
+.horarios p{
+    font-size: 28px;
+    font-weight:600;
+}
+@media(max-width: 900px){
+    .horarios{
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+@media(max-width: 600px){
+    .horarios{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media(max-width: 400px){
+    .horarios{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

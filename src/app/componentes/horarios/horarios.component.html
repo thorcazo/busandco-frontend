@@ -1,1 +1,16 @@
-<p>horarios works!</p>
+<section class="card seccion-horarios">
+    <header class="cabecera"><h3>Parada: Carrefour Zaraiche</h3><button (click)="ocultarHorarios()">Volver</button></header>
+    <div class="tipo">
+        <p>Horarios ({{tipo.value}}):</p>
+        <select #tipo name="tipo" id="">
+            <option value="laborables">Laborables</option>
+            <option value="sábados">Sábados</option>
+            <option value="festivos">Festivos</option>
+        </select>
+    </div>
+    <section class="horarios">
+        @for (horario of horarios; track horario.id) {
+            <p>{{horario.hora}}</p>
+        }
+    </section>
+</section>

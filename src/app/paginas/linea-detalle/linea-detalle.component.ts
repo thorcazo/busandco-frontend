@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ParadasComponent } from '../../componentes/paradas/paradas.component';
 import { HorariosComponent } from '../../componentes/horarios/horarios.component';
 import { MapaComponent } from '../../componentes/mapa/mapa.component';
+import { HorariosService } from '../../servicios/horarios.service';
 
 @Component({
   selector: 'app-linea-detalle',
@@ -24,10 +25,18 @@ export class LineaDetalleComponent implements OnInit{
     { id: 9, nombre: 'Linea 9', descripcion: 'Descripción de la línea 9', empresa: 'Transportes de Murcia', tipo: 'urbana'},
     { id: 10, nombre: 'Linea 10', descripcion: 'Descripción de la línea 10', empresa: 'Movibus', tipo: 'interurbana'}
   ];
+
   linea:any
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
+  constructor(private activatedRoute: ActivatedRoute, private router: Router, private servicioHorarios: HorariosService) { }
 
   ngOnInit(): void {
     this.linea = this.lineas.find(linea => linea.id === parseInt(this.activatedRoute.snapshot.params['id']))
+    this.ocultarHorarios();
+  }
+  ocultarHorarios() {
+    this.servicioHorarios.ocultarHorarios();
+  }
+  getMostrarHorarios() {
+    return this.servicioHorarios.getMostrarHorarios();
   }
 }
