@@ -95,6 +95,8 @@ export class LineaDetalleComponent implements OnInit{
       nombre: 'Parada 4',
     },
   ]
+  id1 = '1';
+  id2 = '2';
 
   ngOnInit(): void {
     this.linea = this.lineas.find(linea => linea.id === parseInt(this.activatedRoute.snapshot.params['id']))

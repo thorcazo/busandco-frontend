@@ -69,8 +69,7 @@ header{
     overflow: hidden; /* Asegura que nada se salga del contenedor */
     border-radius: 10px;
 }
-.mapa2 {
-    display: none;
+.mapa2{
     width: 100%;
     max-height: 400px;
     overflow: hidden; /* Asegura que nada se salga del contenedor */
@@ -81,11 +80,5 @@ header{
 
 
 
-@media (max-width: 800px){
-    .mapa1{
-        display: none;
-    }
-    .mapa2{
-        display: block;
-    }
-}
+
+

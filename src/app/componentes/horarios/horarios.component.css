@@ -9,6 +9,17 @@
     border-radius: 10px;
     margin-bottom: 40px;
 }
+.cabecera a{
+    text-decoration: none;
+    color: var(--azul-oscuro);
+    font-size: 20px;
+    font-weight: bold;
+}
+.cabecera a:hover{
+    color: var(--azul-claro);
+    text-decoration: underline;
+    cursor: pointer;
+}
 .tipo{
     display: flex;
     justify-content: space-between;
