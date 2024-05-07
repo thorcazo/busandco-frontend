@@ -69,22 +69,23 @@ header{
     overflow: hidden; /* Asegura que nada se salga del contenedor */
     border-radius: 10px;
 }
-
-.mapa1 img {
-    object-fit: cover; /* La imagen se redimensionará para cubrir todo el contenedor, manteniendo su aspecto */
-}
-.mapa1 {
+.mapa2 {
+    display: none;
     width: 100%;
     max-height: 400px;
     overflow: hidden; /* Asegura que nada se salga del contenedor */
     border-radius: 10px;
 }
 
-.mapa1 img {
-    object-fit: cover; /* La imagen se redimensionará para cubrir todo el contenedor, manteniendo su aspecto */
-}
+
+
+
+
 @media (max-width: 800px){
     .mapa1{
         display: none;
+    }
+    .mapa2{
+        display: block;
     }
 }
