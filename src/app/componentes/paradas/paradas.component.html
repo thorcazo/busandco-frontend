@@ -5,42 +5,20 @@
                 <th>Población</th>
                 <th>Parada</th>
                 <th>Ver horarios</th>
-                <th>Enlace con líneas</th>
+                <th class="enlace">Enlace con líneas</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Murcia</td>
-                <td>Plaza Circular</td>
-                <td><button (click)="verHorarios()" class="boton">Horarios</button></td>
-                <td><a href="#">Línea 1</a></td>
-            </tr>
-            <tr>
-                <td>Murcia</td>
-                <td>Plaza Circular</td>
-                <td><button class="boton">Horarios</button></td>
-                <td><a href="#">Línea 1</a></td>
-            </tr>
-            <tr>
-                <td>Murcia</td>
-                <td>Plaza Circular</td>
-                <td><button class="boton">Horarios</button></td>
-                <td><a href="#">Línea 1</a></td>
-            </tr>
-            <tr>
-                <td>Murcia</td>
-                <td>Plaza Circular</td>
-                <td><button class="boton">Horarios</button></td>
-                <td><a href="#">Línea 1</a></td>
-            </tr>
-            <tr>
-                <td>Murcia</td>
-                <td>Plaza Circular</td>
-                <td><button class="boton">Horarios</button></td>
-                <td><a href="#">Línea 1</a></td>
-            </tr>
-            
+            @for (parada of paradas; track parada.id) {
+                <tr>
+                    <td>{{parada.poblacion}}</td>
+                    <td>{{parada.nombre}}</td>
+                    <td><button (click)="verHorarios()" class="boton">Horarios</button></td>
+                    <td class="enlace"><a href="#">Línea 1</a></td>
+                </tr>
+            }
         </tbody>
     </table>
+    <app-mapa [id]="'mapa2'" [paradas]="this.paradas" [recorrido]="this.recorrido" class="mapa2"/>
     
 </section>

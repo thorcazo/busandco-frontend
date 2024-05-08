@@ -1,3 +1,7 @@
+.seccion-horarios{
+    position: relative;
+    top: -50px;
+}
 .cabecera{
     background-color: #06d69e52;
     height: auto;
@@ -50,9 +54,20 @@
     .horarios{
         grid-template-columns: repeat(3, 1fr);
     }
+  
+        .seccion-horarios{
+            top: -25px;
+        }
+    
+    
 }
 @media(max-width: 400px){
     .horarios{
         grid-template-columns: repeat(2, 1fr);
     }
 }
+@media(min-width: 800px){
+    .mapa2{
+     display: none;
+    }
+ }

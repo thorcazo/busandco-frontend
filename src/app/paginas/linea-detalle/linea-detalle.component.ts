@@ -67,36 +67,80 @@ export class LineaDetalleComponent implements OnInit{
       latitud: 37.99298124045659,
       longitud: -1.1306863892526378,
     },
-   
+    {
+      latitud: 37.995079756139944,
+      longitud: -1.1330837019704052,
+    },
+    {
+      latitud: 37.9961,
+      longitud: -1.1341,
+    },
+    {
+      latitud: 38.0031,
+      longitud: -1.1411,
+    },
+    {
+      latitud: 38.0090,
+      longitud: -1.1471,
+    },
+    {
+      latitud: 38.0122,
+      longitud: -1.1503,
+    },
+    {
+      latitud: 38.01386,
+      longitud: -1.15612,
+    },
+
   ];
   paradas = [
     {
       latitud: 37.983066263948956,
       longitud: -1.1308138313762457,
-      nombre: 'Parada 1',
+      nombre: 'Parada de ejemplo 1',
+      poblacion: 'Molina de Segura',
     },
     {
       latitud: 37.98654180320139,
       longitud: -1.1320955533467343,
       nombre: 'Parada 2',
+      poblacion: 'Molina de Segura',
     },
     {
       latitud: 37.99158219665446,
       longitud: -1.1303905184122143,
       nombre: 'Parada 3',
-    }, {
-      latitud: 37.995079756139944,
-      longitud: -1.1330837019704052,
-      nombre: 'Parada 4',
-    },
+      poblacion: 'Murcia',
+    }, 
     {
       latitud: 37.995079756139944,
       longitud: -1.1330837019704052,
       nombre: 'Parada 4',
+      poblacion: 'Murcia',
     },
+    {
+      latitud: 38.0031,
+      longitud: -1.1411,
+      nombre: 'Parada 5',
+      poblacion: 'Murcia',
+    },
+    {
+      latitud: 38.0090,
+      longitud: -1.1471,
+      nombre: 'Parada 6',
+      poblacion: 'Murcia',
+    },
+    {
+      latitud: 38.01386,
+      longitud: -1.15612,
+      nombre: 'Parada 7',
+      poblacion: 'Murcia',
+    },
+    
+
+
+   
   ]
-  id1 = '1';
-  id2 = '2';
 
   ngOnInit(): void {
     this.linea = this.lineas.find(linea => linea.id === parseInt(this.activatedRoute.snapshot.params['id']))

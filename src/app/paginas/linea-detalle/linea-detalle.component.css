@@ -43,6 +43,7 @@ header{
     gap: 20px;
 }
 .empresa p{
+    text-align: center;
     font-size: 22px;
     font-weight: 500;
 }
@@ -66,19 +67,25 @@ header{
 .mapa1 {
     width: 100%;
     max-height: 400px;
-    overflow: hidden; /* Asegura que nada se salga del contenedor */
+    overflow: hidden; 
     border-radius: 10px;
 }
-.mapa2{
-    width: 100%;
-    max-height: 400px;
-    overflow: hidden; /* Asegura que nada se salga del contenedor */
-    border-radius: 10px;
+@media(max-width: 800px){
+   .mapa1{
+    display: none;
+   }
 }
 
-
-
-
-
-
-
+@media(max-width: 600px){
+    .cabecera-linea{
+        top: -25px;
+    }
+}
+@media(max-width: 400px){
+    .empresa p{
+        font-size: 18px;
+    }
+    .empresa img{
+        max-width: 80px;
+    }
+}

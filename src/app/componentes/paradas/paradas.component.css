@@ -29,16 +29,31 @@ tbody tr td{
     text-align: center;
 }
 .boton{
+
     height: auto;
     padding: 4px 40px;
 }
-.mapa {
-    width: 100%;
-    max-height: 400px;
-    overflow: hidden; /* Asegura que nada se salga del contenedor */
-    border-radius: 10px;
-}
 
-.mapa img {
-    object-fit: cover; /* La imagen se redimensionará para cubrir todo el contenedor, manteniendo su aspecto */
-}
+@media(min-width: 800px){
+    .mapa2{
+     display: none;
+    }
+ }
+ @media(max-width: 800px){
+    .enlace{
+        display: none;
+    }
+    thead tr th:nth-child(3){
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .boton{
+        padding: 4px 10px;
+    }
+ }
+ @media(max-width: 600px){
+    .paradas{
+        top: -25px;
+    }
+  
+ }

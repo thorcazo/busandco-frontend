@@ -11,6 +11,8 @@ import { HorariosService } from '../../servicios/horarios.service';
 })
 export class ParadasComponent {
   constructor(private servicioHorarios: HorariosService) { }
+  @Input() paradas: any;
+  @Input() recorrido: any;
   verHorarios() {
     this.servicioHorarios.verHorarios();
   }

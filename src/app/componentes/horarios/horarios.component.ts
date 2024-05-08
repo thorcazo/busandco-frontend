@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { HorariosService } from '../../servicios/horarios.service';
+import { MapaComponent } from '../mapa/mapa.component';
 
 @Component({
   selector: 'app-horarios',
   standalone: true,
-  imports: [],
+  imports: [MapaComponent],
   templateUrl: './horarios.component.html',
   styleUrl: './horarios.component.css'
 })
@@ -31,6 +32,8 @@ export class HorariosComponent {
     { id: 19, hora: '02:00', tipo: 'festivo' },
     { id: 20, hora: '03:00', tipo: 'sabado' }
   ];
+  @Input() paradas:any;
+  @Input() recorrido:any;
 
   constructor(private servicioHorarios: HorariosService) { }
   verHorarios() {

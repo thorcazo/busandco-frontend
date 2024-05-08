@@ -14,7 +14,7 @@
                     </div>
                 </div>
                 <div class="empresa">
-                    <p>TMP Murcia</p>
+                    <p>Transportes de Murcia</p>
                     <img src="assets/imagenes/logoTMP.png" alt="">
                 </div>
             </header>
@@ -24,20 +24,17 @@
             </div>
         </div>
         
-            <app-mapa  [paradas]="this.paradas" [recorrido]="this.recorrido" class="mapa1"/>
+            <app-mapa [id]="'mapa1'" [paradas]="this.paradas" [recorrido]="this.recorrido" class="mapa1"/>
             
         
         
     </section>
     @if(getMostrarHorarios()){
-        <app-horarios class="horarios"/>
+        <app-horarios [paradas]="this.paradas" [recorrido]="this.recorrido" class="horarios"/>
     }
     @else {
-        <app-paradas class="paradas"/>
+        <app-paradas [paradas]="this.paradas" [recorrido]="this.recorrido" class="paradas"/>
         
     }
-    <section class="card">
-        <!-- <app-mapa  [paradas]="this.paradas" [recorrido]="this.recorrido" class="mapa2"/> -->
-    </section>
     
 </main>

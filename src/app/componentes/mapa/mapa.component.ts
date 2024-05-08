@@ -16,17 +16,18 @@ export class MapaComponent implements OnInit {
 
    }
   ngOnInit(): void {
-    this.configurarMapa();
+    setTimeout(() => {
+      this.configurarMapa();
+    }, 0);
+    
   }
-
+  @Input() id:any;
   mapa: any;
-  id = 'mapa1';
   @Input() paradas: any;
   @Input() recorrido: any;
   
 
   configurarMapa() {
-   
     this.mapa = L.map(this.id).setView([37.9815, -1.1277], 14);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
