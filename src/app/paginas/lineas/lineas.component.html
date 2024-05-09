@@ -24,7 +24,12 @@
             </div>
             <button (click)="borrarFlitros()">Borrar filtros</button>
     </section>
-    @for (linea of lineas | nombrelineas:nombre | empresalineas:empresa |tipolineas:tipo; track linea.id) {
+
+    @if ((lineas | nombrelineas:nombre | empresalineas:empresa | tipolineas:tipo).length === 0) {
+      <h1>No se han encontrado líneas 🙁​ </h1>
+    }@else {
+      @for (linea of lineas | nombrelineas:nombre | empresalineas:empresa |tipolineas:tipo; track linea.id) {
         <app-linea [linea]="linea"/>
+      }
     }
 </main>
