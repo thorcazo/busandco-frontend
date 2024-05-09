@@ -1,7 +1,6 @@
 .lineas{
   display: flex;    
   flex-direction: column;
-  padding-bottom: 10px;
 }
 
 .cont-filtros{
@@ -34,6 +33,11 @@ button{
 button:hover{
     cursor: pointer;
     text-decoration: underline;
+}
+.main h2{
+    position: relative;
+    top: -25px;
+    margin: 0px 50px 25px 50px;
 }
 @media (max-width: 840px){
     .cont-filtros{

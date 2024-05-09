@@ -26,7 +26,7 @@
     </section>
 
     @if ((lineas | nombrelineas:nombre | empresalineas:empresa | tipolineas:tipo).length === 0) {
-      <h1>No se han encontrado líneas 🙁​ </h1>
+      <h2>No se han encontrado líneas 🙁​ </h2>
     }@else {
       @for (linea of lineas | nombrelineas:nombre | empresalineas:empresa |tipolineas:tipo; track linea.id) {
         <app-linea [linea]="linea"/>
