@@ -8,7 +8,7 @@ export class NombrelineasPipe implements PipeTransform {
 
   transform(lineas: any[], nombre: string): any[] {
     if(lineas && lineas.length)
-      return lineas.filter(linea => linea.nombre.toLowerCase().includes(nombre.toLowerCase().trim()))
+      return lineas.filter(linea => linea.linea.toLowerCase().includes(nombre.toLowerCase().trim()))
     else
       return []                                       
   }

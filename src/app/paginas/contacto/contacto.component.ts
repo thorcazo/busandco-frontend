@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TarjetaContactoComponent } from '../../componentes/tarjeta-contacto/tarjeta-contacto.component';
+import { ComunicacionService } from '../../servicios/comunicacion.service';
 
 @Component({
   selector: 'app-contacto',
@@ -8,7 +9,8 @@ import { TarjetaContactoComponent } from '../../componentes/tarjeta-contacto/tar
   templateUrl: './contacto.component.html',
   styleUrl: './contacto.component.css'
 })
-export class ContactoComponent {
+export class ContactoComponent implements OnInit{
+  titulo:string = 'Contacto'
   empresas = [
     {
       id: 1,
@@ -38,4 +40,8 @@ export class ContactoComponent {
       logo: '../../../assets/imagenes/logoMovibus.jpg'
     },
   ]
+  constructor(private comunicacionService: ComunicacionService){}
+  ngOnInit(): void {
+      this.comunicacionService.setTitulo(this.titulo)
+  }
 }

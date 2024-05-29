@@ -1,14 +1,19 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, NgModule } from '@angular/core';
+import { FormsModule, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-buscador',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './buscador.component.html',
   styleUrl: './buscador.component.css'
 })
 export class BuscadorComponent {
   @Input() paradas:any
+  origen:any
+  destino:any
+  fecha:any
+  hora:any
   
   empresas = [
     {
@@ -27,4 +32,10 @@ export class BuscadorComponent {
       descripcion: 'Descripción de la empresa 3'
     }
   ]
+  borrarFiltros(){
+    this.origen = ''
+    this.destino = ''
+    this.fecha = ''
+    this.hora = ''
+  }
 }

@@ -1,11 +1,11 @@
 <section class="card linea">
     <div class="left">
-        <h2>{{linea.nombre}}</h2>
+        <h2>{{linea.linea}}</h2>
         <p>{{linea.descripcion}}</p>
     </div>
     <div class="right">
         <p class="empresa">{{linea.empresa}}</p>
-        <button [routerLink]="['/detalle-linea', linea.id]" routerLinkActive="router-link-active"  class="boton">
+        <button [routerLink]="['/detalle-linea', linea.idLinea]" routerLinkActive="router-link-active"  class="boton">
             Ver detalles
         </button>
     </div>

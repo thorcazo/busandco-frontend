@@ -1,6 +1,8 @@
-import { Component, Input } from '@angular/core';
-import { HorariosService } from '../../servicios/horarios.service';
+import { Component, Input, OnInit } from '@angular/core';
 import { MapaComponent } from '../mapa/mapa.component';
+import { LineaDetalleService } from '../../servicios/linea-detalle.service';
+import { ParadaService } from '../../servicios/parada.service';
+import { ComunicacionService } from '../../servicios/comunicacion.service';
 
 @Component({
   selector: 'app-horarios',
@@ -9,40 +11,38 @@ import { MapaComponent } from '../mapa/mapa.component';
   templateUrl: './horarios.component.html',
   styleUrl: './horarios.component.css'
 })
-export class HorariosComponent {
-  horarios = [
-    { id: 1, hora: '08:00', tipo: 'laborable' },
-    { id: 2, hora: '09:00', tipo: 'laborable' },
-    { id: 3, hora: '10:00', tipo: 'laborable' },
-    { id: 4, hora: '11:00', tipo: 'laborable' },
-    { id: 5, hora: '12:00', tipo: 'laborable' },
-    { id: 6, hora: '13:00', tipo: 'laborable' },
-    { id: 7, hora: '14:00', tipo: 'laborable' },
-    { id: 8, hora: '15:00', tipo: 'laborable' },
-    { id: 9, hora: '16:00', tipo: 'laborable' },
-    { id: 10, hora: '17:00', tipo: 'laborable' },
-    { id: 11, hora: '18:00', tipo: 'laborable' },
-    { id: 12, hora: '19:00', tipo: 'laborable' },
-    { id: 13, hora: '20:00', tipo: 'laborable' },
-    { id: 14, hora: '21:00', tipo: 'laborable' },
-    { id: 15, hora: '22:00', tipo: 'laborable' },
-    { id: 16, hora: '23:00', tipo: 'laborable' },
-    { id: 17, hora: '00:00', tipo: 'sabado' },
-    { id: 18, hora: '01:00', tipo: 'sabado' },
-    { id: 19, hora: '02:00', tipo: 'festivo' },
-    { id: 20, hora: '03:00', tipo: 'sabado' }
-  ];
+export class HorariosComponent implements OnInit{
+  horarios:any; 
+  @Input()
   @Input() paradas:any;
   @Input() recorrido:any;
+  tipoSeleccionado:string = 'Laboral'
 
-  constructor(private servicioHorarios: HorariosService) { }
+  constructor(private servicioComunicacion: ComunicacionService, private servicioLineaDetalle: LineaDetalleService) { }
+  ngOnInit(): void {
+    this.servicioLineaDetalle.setHorarios(this.servicioLineaDetalle.getIdSublinea(), this.servicioLineaDetalle.getParada().idParada, this.servicioLineaDetalle.getDireccion()).subscribe((json) => {
+      this.horarios = json;
+    });
+  }
+
+  getParada(){
+    return this.servicioLineaDetalle.getParada();
+  }
+  quitarSegundos(hora:string){
+    return hora.substring(0,5);
+  }
   verHorarios() {
-    this.servicioHorarios.verHorarios();
+    this.servicioComunicacion.verHorarios();
   }
   ocultarHorarios() {
-    this.servicioHorarios.ocultarHorarios();
+    this.servicioComunicacion.ocultarHorarios();
   }
   getMostrarHorarios() {
-    return this.servicioHorarios.getMostrarHorarios();
+    return this.servicioComunicacion.getMostrarHorarios();
+  }
+  setHorarios(parada:any) {
+    // this.servicioLineaDetalle.getHorarios(parada.id).subscribe((json) => {
+    //   this.horarios = json;
+    // });
   }
 }

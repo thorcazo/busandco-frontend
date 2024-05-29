@@ -12,9 +12,14 @@
             @for (parada of paradas; track parada.id) {
                 <tr>
                     <td>{{parada.poblacion}}</td>
-                    <td>{{parada.nombre}}</td>
-                    <td><button (click)="verHorarios()" class="boton">Horarios</button></td>
-                    <td class="enlace"><a href="#">Línea 1</a></td>
+                    <td>{{parada.parada}}</td>
+                    <td><button (click)="setParada(parada)" class="boton">Horarios</button></td>
+                    <td class="enlace">
+                        @for (enlace of parada.enlaces; track $index) {
+                            <a [routerLink]="['/detalle-linea', 5]" routerLinkActive="active">{{enlace.nombre}}</a>
+                           
+                        }
+                    </td>
                 </tr>
             }
         </tbody>

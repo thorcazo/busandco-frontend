@@ -1,10 +1,11 @@
 
 .cabecera{
     width: 100%;
-    min-height: 420px;
-    background: linear-gradient(270deg, rgba(255, 255, 255, 0.0) 0%, rgba(255, 255, 255, 0.5) 100%),  url('../../../assets/imagenes/cabecera-copia.jpg');
+    min-height: 300px;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.0) 0%, rgba(255, 255, 255, 0.5) 100%),  url('../../../assets/imagenes/Zaen-header.png');
     background-size:cover;
-    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
     background-repeat: no-repeat;
     color: var(--azul-oscuro);
     display: grid;
@@ -18,7 +19,6 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 0 100px;
-    color: var(--azul-oscuro);
     grid-column: 1 / 11;
     transition: background-color 0.5s;
 }
@@ -27,9 +27,17 @@ h1{
     font-size: 38px;
 }
 .logo{
+    text-decoration: none;
     font-size: 52px;
     font-weight: bold;
     color: var(--azul-oscuro);
+}
+.logo-full{
+    display: block;
+    width: 200px;
+}
+.logo-mobile{
+    display: none;
 }
 .bars{
     display: none;
@@ -60,7 +68,7 @@ h1{
 
 @media(max-width: 1200px){
     .cabecera{
-        min-height: 300px;
+        min-height: 200px;
     }
     h1{
         font-size: 32px;
@@ -146,7 +154,7 @@ h1{
 }
 @media(max-width: 900px){
     .cabecera{
-        min-height: 200px;
+        min-height: 180px;
     }
     .logo{
         font-size: 42px;
@@ -156,11 +164,19 @@ h1{
     }
 }
 @media(max-width: 600px){
+    
     .cabecera{
         min-height: 150px;
     }
     .logo{
         font-size: 36px;
+    }
+    .logo-full{
+        display: none;
+    }
+    .logo-mobile{
+        display: block;
+        width: 50px;
     }
     h1{
         font-size: 22px;
@@ -169,7 +185,7 @@ h1{
 @media(max-width: 400px){
    .cabecera{
     
-    background: linear-gradient(270deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.5) 100%),  url('../../../assets/imagenes/cabecera-copia.jpg');
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.5) 100%),  url('../../../assets/imagenes/Zaen-header.png');
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -182,10 +198,6 @@ h1{
     }
 }
 @media(min-width: 1700px){
-    .cabecera{
-        min-height: 420px;
-        background-position-y:top
-    }
     .logo{
         font-size: 62px;
     }

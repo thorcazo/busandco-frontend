@@ -44,8 +44,9 @@ export class MapaComponent implements OnInit {
     });
     
     this.paradas.forEach((parada:any) => {
-      L.marker([parada.latitud, parada.longitud]).addTo(this.mapa)
-      .bindPopup(`<b>${parada.nombre}</b>`)
+      L.marker([parada.coordenadas[0].latitud, parada.coordenadas[0].longitud]).addTo(this.mapa)
+      .bindPopup(`<b>${parada.parada}</b>`);
+      
     });
     
   }

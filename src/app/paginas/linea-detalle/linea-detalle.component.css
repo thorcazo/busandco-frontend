@@ -56,10 +56,17 @@ header{
     gap: 20px;
     
 }
-.direccion button{
+.direccion-cambio{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.direccion-cambio button{
+    padding: 0 20px;
     max-width: 200px;
 }
-.direccion p{
+.direccion-nombre{
     font-size: 22px;
     font-weight: 600;
 
@@ -69,6 +76,13 @@ header{
     max-height: 400px;
     overflow: hidden; 
     border-radius: 10px;
+}
+.direccion-error{
+    display: none;
+    font-size: 16px;
+}
+.active{
+    display: block;
 }
 @media(max-width: 800px){
    .mapa1{

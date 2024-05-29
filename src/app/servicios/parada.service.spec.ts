@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { BdService } from './bd.service';
+import { ParadaService } from './parada.service';
 
-describe('BdService', () => {
-  let service: BdService;
+describe('ParadaService', () => {
+  let service: ParadaService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(BdService);
+    service = TestBed.inject(ParadaService);
   });
 
   it('should be created', () => {

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IncidenciaComponent } from '../../componentes/incidencia/incidencia.component';
+import { ComunicacionService } from '../../servicios/comunicacion.service';
 
 @Component({
   selector: 'app-incidencias',
@@ -8,7 +9,8 @@ import { IncidenciaComponent } from '../../componentes/incidencia/incidencia.com
   templateUrl: './incidencias.component.html',
   styleUrl: './incidencias.component.css'
 })
-export class IncidenciasComponent {
+export class IncidenciasComponent implements OnInit{
+  titulo:string = 'Incidencias'
   incidencias: any[] = [
     {
       id: 1,
@@ -29,4 +31,8 @@ export class IncidenciasComponent {
       lineasAfectadas: ['L13', 'C2', 'L45', 'L78']
     }
   ];
+  constructor(private comunicacionService: ComunicacionService){}
+  ngOnInit(): void {
+      this.comunicacionService.setTitulo(this.titulo)
+  }
 }

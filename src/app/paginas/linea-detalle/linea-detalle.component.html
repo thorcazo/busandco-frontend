@@ -1,40 +1,51 @@
 <main class="main detalle-linea">
     <section class="card cabecera-linea">
-        <div class="informacion">
-            <header>
-                <div class="linea">
-                    <h2>{{linea.nombre}}</h2>
-                    <div class="sublinea">
-                        <label for="sublinea">Sublínea</label>
-                        <select name="sublinea" id="">
-                            <option value="44A">44 A</option>
-                            <option value="44B">44 B</option>
-                            <option value="44C">44 C</option>
-                        </select>
+        @if(this.cabeceraLinea){
+            <div class="informacion">
+                <header>
+                    <div class="linea">
+                        <h2>{{cabeceraLinea.nombreLinea}} {{nombreSublinea}}</h2>
+                        <div class="sublinea">
+                            <label for="sublinea">Sublínea</label>
+                            <select #selectSublinea (change)="cambiarSublinea(selectSublinea.value)" name="sublinea" id="sublinea">
+                                @for (sublinea of cabeceraLinea.sublineas; track sublinea.id) {
+                                    <option value="{{sublinea.id}}">{{cabeceraLinea.nombreLinea}} {{sublinea.nombre}}</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="empresa">
+                        <p>{{cabeceraLinea.empresa}}</p>
+                        <img src="assets/imagenes/logoTMP.png" alt="">
+                    </div>
+                </header>
+                <div class="direccion">
+                    <p class="direccion-nombre">{{direccion}}</p>
+                    <div class="direccion-cambio">
+                        <button (click)="cambiarDireccion()" class="boton">Cambio de dirección</button>
+                        <p class="direccion-error" [class.active]="errorDireccion">Esta sublínea sólo tiene una dirección</p>
                     </div>
                 </div>
-                <div class="empresa">
-                    <p>Transportes de Murcia</p>
-                    <img src="assets/imagenes/logoTMP.png" alt="">
-                </div>
-            </header>
-            <div class="direccion">
-                <p>{{linea.descripcion}}</p>
-                <button class="boton">Cambio de dirección</button>
             </div>
-        </div>
+        }
         
-            <app-mapa [id]="'mapa1'" [paradas]="this.paradas" [recorrido]="this.recorrido" class="mapa1"/>
+            @if (this.paradas) {
+                <app-mapa [id]="'mapa1'" [paradas]="this.paradas" [recorrido]="this.recorrido" class="mapa1"/>
+            }
+            
             
         
         
     </section>
-    @if(getMostrarHorarios()){
-        <app-horarios [paradas]="this.paradas" [recorrido]="this.recorrido" class="horarios"/>
+    @if(this.paradas){
+        @if(getMostrarHorarios()){
+            <app-horarios [paradas]="this.paradas" [recorrido]="this.recorrido" class="horarios"/>
+        }
+        @else {
+            <app-paradas [paradas]="this.paradas" [recorrido]="this.recorrido" class="paradas"/>
+            
+        }
     }
-    @else {
-        <app-paradas [paradas]="this.paradas" [recorrido]="this.recorrido" class="paradas"/>
-        
-    }
+    
     
 </main>

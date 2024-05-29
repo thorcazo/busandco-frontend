@@ -1,28 +1,28 @@
-<section class="card buscador">
+<section class="buscador">
     <div class="cont origen">
         <label for="origen">Origen</label>
-        <input type="text" name="origen" id="" placeholder="Introduce el origen">
+        <input [(ngModel)]="origen" type="text" name="origen" id="origen" placeholder="Introduce el origen">
         <ul>
             @for (parada of paradas; track parada.id) {
-                <li>{{parada.nombre}}</li>
+            <li>{{parada.nombre}}</li>
             }
         </ul>
     </div>
     <div class="cont destino">
         <label for="destino">Destino</label>
-        <input type="text" name="destino" id="" placeholder="Introduce el destino">
+        <input [(ngModel)]="destino" type="text" name="destino" id="destino" placeholder="Introduce el destino">
     </div>
     <div class="cont fecha">
         <label for="fecha">Fecha</label>
-        <input type="date" name="fecha" id="">
+        <input [(ngModel)]="fecha" type="date" name="fecha" id="fecha">
     </div>
-    <div class="cont empresa">
-        <label for="empresa">Empresa</label>
-        <select name="empresa" id="">
-            @for (empresa of empresas; track empresa.id) {
-                <option value="{{empresa.id}}">{{empresa.nombre}}</option>
-            }
-        </select>
+    <div class="cont hora">
+        <label for="hora">Hora</label>
+        <input [(ngModel)]="hora" type="time" name="hora" id="hora">
     </div>
-    <button class="boton">Buscar</button>
+    <div class="cont botones">
+        <button class="borrar" (click)="borrarFiltros()">Borrar todo</button>
+        <button class="boton">Buscar</button>
+        
+    </div>
 </section>

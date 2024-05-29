@@ -1,25 +1,34 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { MapaComponent } from '../mapa/mapa.component';
-import { HorariosService } from '../../servicios/horarios.service';
+import { ParadaService } from '../../servicios/parada.service';
+import { RouterLink, RouterModule } from '@angular/router';
+import { LineaDetalleService } from '../../servicios/linea-detalle.service';
+import { ComunicacionService } from '../../servicios/comunicacion.service';
 
 @Component({
   selector: 'app-paradas',
   standalone: true,
-  imports: [MapaComponent],
+  imports: [MapaComponent, RouterModule],
   templateUrl: './paradas.component.html',
   styleUrl: './paradas.component.css'
 })
 export class ParadasComponent {
-  constructor(private servicioHorarios: HorariosService) { }
+  constructor(private servicioComunicacion: ComunicacionService, private servicioLineaDetalle: LineaDetalleService) { }
   @Input() paradas: any;
   @Input() recorrido: any;
+
   verHorarios() {
-    this.servicioHorarios.verHorarios();
+    
   }
   ocultarHorarios() {
-    this.servicioHorarios.ocultarHorarios();
+    this.servicioComunicacion.ocultarHorarios();
   }
   getMostrarHorarios() {
-    return this.servicioHorarios.getMostrarHorarios();
+    return this.servicioComunicacion.getMostrarHorarios();
   }
+  setParada(parada:any) {
+    this.servicioLineaDetalle.setParada(parada);
+    this.servicioComunicacion.verHorarios();
+  }
+
 }

@@ -1,20 +1,28 @@
 <section class="cabecera">
        <header [class.menuactivo]="activarMenu">
-              <div class="logo">Bus&Co</div>
-               <div (click)="alternarMenu()" class="bars">
+              <a class="logo" routerLink="/origen-destino" routerLinkActive="active" href="#">
+                     <img class="logo-full" src="assets/imagenes/logo-horizontal.png" alt="Logo BusAndCo">
+                     <img class="logo-mobile" src="assets/imagenes/logo-solo.png" alt="Logo BusAndCo">
+              </a>
+              <div (click)="alternarMenu()" class="bars">
                      <div [class.selected1]="activarMenu" [class.line]="!activarMenu"></div>
                      <div [class.selected2]="activarMenu" [class.line]="!activarMenu"></div>
                      <div [class.selected3]="activarMenu" [class.line]="!activarMenu"></div>
-               </div>      
-               <nav class="nav-bar" [class.active]="activarMenu">
+              </div>
+              <nav class="nav-bar" [class.active]="activarMenu">
                      <ul>
-                            <li><a (click)="setTitle('Origen - Destino'); this.activarMenu = false" routerLink="/origen-destino" routerLinkActive="active" href="#">Origen - Destino</a></li>
-                            <li><a (click)="setTitle('Líneas'); this.activarMenu = false" routerLink="/lineas" routerLinkActive="active" href="#">Líneas</a></li>
-                            <li><a (click)="setTitle('Noticias'); this.activarMenu = false" routerLink="/noticias" routerLinkActive="active" href="#">Noticias</a></li>
-                            <li><a (click)="setTitle('Incidencias'); this.activarMenu = false" routerLink="/incidencias" routerLinkActive="active" href="#">Incidencias</a></li>
-                            <li><a (click)="setTitle('Contacto'); this.activarMenu = false" routerLink="/contacto" routerLinkActive="active" href="#">Contacto</a></li>
+                            <li><a (click)=" this.activarMenu = false" routerLink="/origen-destino"
+                                          routerLinkActive="active" href="#">Origen - Destino</a></li>
+                            <li><a (click)=" this.activarMenu = false" routerLink="/lineas" routerLinkActive="active"
+                                          href="#">Líneas</a></li>
+                            <li><a (click)=" this.activarMenu = false" routerLink="/noticias" routerLinkActive="active"
+                                          href="#">Noticias</a></li>
+                            <li><a (click)=" this.activarMenu = false" routerLink="/incidencias"
+                                          routerLinkActive="active" href="#">Incidencias</a></li>
+                            <li><a (click)=" this.activarMenu = false" routerLink="/contacto" routerLinkActive="active"
+                                          href="#">Contacto</a></li>
                      </ul>
-               </nav>       
+              </nav>
        </header>
-       <h1>{{title}}</h1>
+       <h1>{{this.comunicacionService.getTitulo()}}</h1>
 </section>

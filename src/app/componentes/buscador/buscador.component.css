@@ -1,23 +1,55 @@
 .buscador{
-   
+    background-color: var(--blanco);
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(207, 179, 179, 0.25);
+    padding: 20px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-content: center;
     align-items: center;
-    width: 80vw;
+    gap: 50px;
     height: auto;
     position: relative;
     top: -50px;
-    left: 100px;
+}
+.borrar{
+    align-self: flex-end;
+    color: rgb(129, 0, 0);
+    font-family: Urbanist;
+    font-weight: semibold;
+    border: 0;
+    background-color: var(--blanco);
+}
+.borrar:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
 .boton{
     font-size: 24px;
-    align-self: flex-end;
+    padding: 0 30px;
 }
 .cont{
     display: flex;
     flex-direction: column;
-    align-content: flex-end;
     gap: 4px;
+}
+
+@media(max-width: 1090px){
+    .buscador{
+        gap: 20px;
+    }
+}
+@media(max-width: 965px){
+    .buscador{
+        margin: 0 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        top: -25px;
+    }
+    input{
+        justify-content: stretch;
+        width: calc();
+    }
 }
