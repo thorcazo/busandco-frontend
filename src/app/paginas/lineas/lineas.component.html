@@ -22,7 +22,7 @@
                     <option value="Interurbana">Interurbanas</option>
                 </select>
             </div>
-            <button (click)="borrarFlitros()">Borrar filtros</button>
+            <button class="boton-terciario" (click)="borrarFiltros()">Borrar filtros</button>
     </section>
 
     @if ((lineas | nombrelineas:nombre | empresalineas:empresa | tipolineas:tipo).length === 0) {

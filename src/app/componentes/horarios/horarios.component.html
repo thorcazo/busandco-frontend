@@ -12,7 +12,7 @@
         <section class="horarios">
             @for (horario of horarios.horario; track horario.hora) {
                 @if(horario.tipo == this.tipoSeleccionado){
-                    <p>{{quitarSegundos(horario.hora)}}</p>
+                    <p>{{horario.hora}}</p>
                 }
                 
             }

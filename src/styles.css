@@ -8,6 +8,7 @@
     --blanco: #FFF;
     --negro: #000;
     --gris: #EEE;
+    --azul-hover: #117286;
 
     /*Fuentes*/
     @font-face {
@@ -17,7 +18,16 @@
     }
     body {
         font-family: Urbanist, sans-serif;
+        background-color: var(--gris);
         color: var(--azul-oscuro);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    app-root{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
 
     /*Reseteo CSS*/
@@ -36,11 +46,40 @@
         border: 0;
         border-radius: 10px;
         transition: background-color 0.3s;
+        font-size: 16px;
+        
     }
     .boton:hover{
         cursor:pointer;
         background-color: #06D6A0;
         transition: background-color 0.3s;
+    }
+    .boton-secundario{
+        background-color: var(--blanco);
+        color: var(--azul-oscuro);
+        border: 2px solid var(--amarillo);
+        font-weight:600;
+        /* padding: 10px 20px; */
+        border-radius: 10px;
+        font-family: Urbanist;
+        font-size: 16px;
+        cursor: pointer;
+        transition: border 0.3s;
+    }
+    .boton-secundario:hover{
+        border: 2px solid var(--verde);
+        transition: border 0.3s;
+    }
+    .boton-terciario{
+        background-color: var(--blanco);
+        border: 0;
+        color: var(--azul-oscuro);
+        font-weight:600;
+        font-family: Urbanist;
+    }
+    .boton-terciario:hover{
+        cursor:pointer;
+        text-decoration: underline;
     }
     input, select{
         box-sizing: border-box;
@@ -48,7 +87,6 @@
         border: 0;
         border-radius: 10px;
         height: 48px;
-        
         padding: 8px;
         font-family: Urbanist;
         font-size: 16px;
@@ -69,3 +107,4 @@
         margin: 0 20px 20px 20px;
     }
 }
+

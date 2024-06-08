@@ -45,6 +45,12 @@
     font-size: 28px;
     font-weight:600;
 }
+@media(max-width: 1200px){
+    .seccion-horarios{
+        top: -25px;
+    }
+
+}
 @media(max-width: 900px){
     .horarios{
         grid-template-columns: repeat(5, 1fr);

@@ -6,6 +6,12 @@ import { IncidenciasComponent } from './paginas/incidencias/incidencias.componen
 import { ContactoComponent } from './paginas/contacto/contacto.component';
 import { LineasComponent } from './paginas/lineas/lineas.component';
 import { NoticiaExtendidaComponent } from './paginas/noticia-extendida/noticia-extendida.component';
+import { LoginComponent } from './paginas/login/login.component';
+import { Component } from '@angular/core';
+import { AdminListadoComponent } from './paginas/admin-listado/admin-listado.component';
+import { AdminCrearComponent } from './paginas/admin-crear/admin-crear.component';
+import { Error404Component } from './paginas/error404/error404.component';
+import { loginGuard } from './guards/login.guard';
 
 export const routes: Routes = [
     {
@@ -48,6 +54,28 @@ export const routes: Routes = [
         path: 'contacto',
         component: ContactoComponent,
         title: 'Contacto - Bus&Co',
-    }
+    },
+    {
+        path: 'login',
+        component: LoginComponent,
+        title: 'Iniciar sesión - Bus&Co',
+    },
+    {
+        path: 'admin-listado',
+        component: AdminListadoComponent,
+        canActivate: [loginGuard],
+        title: 'Líneas - Administración - Bus&Co',
+    },
+    {
+        path: 'admin-crear',
+        component: AdminCrearComponent,
+        canActivate: [loginGuard],
+        title: 'Crear línea - Administración - Bus&Co',
+    },
+    {
+        path: '**',
+        component: Error404Component,
+        pathMatch: 'full',
+    },
     
 ];

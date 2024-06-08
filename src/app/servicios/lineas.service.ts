@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class LineasService {
   private lineas:any;
-  private urlBase:string ="http://127.0.0.1:8000/api/lineas"
+  private urlBase:string ="http://127.0.0.1:8000/usuario/lineas"
 
   constructor(private http:HttpClient) {
     this.setLineas();
@@ -15,6 +15,7 @@ export class LineasService {
 
    setLineas(): Observable<any[]>{
     this.lineas = this.http.get<any[]>(this.urlBase)
+    
     return this.lineas;
   }
   getLineas(){

@@ -22,21 +22,25 @@ import { ComunicacionService } from '../../servicios/comunicacion.service';
 })
 export class LineasComponent {
   titulo:string = 'Líneas'
-  public lineas: any;
-  constructor(private lineasService: LineasService, private comunicacionService: ComunicacionService) {}
-
-  ngOnInit() {
-    this.comunicacionService.setTitulo(this.titulo)
-    this.lineasService.getLineas().subscribe((json:any) => {
-      this.lineas = json;
-    });
-    
-  }
   nombre: string = '';
   empresa: string = 'Todas';
   tipo: string = 'Todas';
+  public lineas: any = JSON.parse(localStorage.getItem('lineas') || '[]');
+  constructor(private lineasService: LineasService, private comunicacionService: ComunicacionService) {
+    if(localStorage.getItem('lineas') == null){
+      this.lineasService.getLineas().subscribe((json:any) => {
+        this.lineas = json;
+        localStorage.setItem('lineas', JSON.stringify(this.lineas));
+      });
+    }
+  }
 
-  borrarFlitros() {
+  ngOnInit() {
+    this.comunicacionService.setTitulo(this.titulo);
+  }
+
+
+  borrarFiltros() {
     this.nombre = '';
     this.empresa = 'Todas';
     this.tipo = 'Todas';

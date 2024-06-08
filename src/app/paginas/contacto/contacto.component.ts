@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TarjetaContactoComponent } from '../../componentes/tarjeta-contacto/tarjeta-contacto.component';
 import { ComunicacionService } from '../../servicios/comunicacion.service';
+import { ContactoService } from '../../servicios/contacto.service';
 
 @Component({
   selector: 'app-contacto',
@@ -11,36 +12,18 @@ import { ComunicacionService } from '../../servicios/comunicacion.service';
 })
 export class ContactoComponent implements OnInit{
   titulo:string = 'Contacto'
-  empresas = [
-    {
-      id: 1,
-      nombre: 'TMP Murcia',
-      direccion: 'Calle de la Fama, 3, 30003 Murcia',
-      telefono: '968 21 21 21',
-      email: 'tmpmurcia@gmail.com',
-      web: 'www.tmpmurcia.com',
-      logo: '../../../assets/imagenes/logoTMP.png'
-    },
-    {
-      id: 2,
-      nombre: 'TMurcia',
-      direccion: 'Calle de la Fama, 3, 30003 Murcia',
-      telefono: '968 21 21 21',
-      email: 'tmurcia@gmail.com',
-      web: 'www.tmurcia.com',
-      logo: '../../../assets/imagenes/logoTMurcia.png'
-    },
-    {
-      id: 3,
-      nombre: 'Movibus',
-      direccion: 'Calle de la Fama, 3, 30003 Murcia',
-      telefono: '968 21 21 21',
-      email: 'tmpmurcia@gmail.com',
-      web: 'www.tmpmurcia.com',
-      logo: '../../../assets/imagenes/logoMovibus.jpg'
-    },
-  ]
-  constructor(private comunicacionService: ComunicacionService){}
+  empresas:any = JSON.parse(localStorage.getItem('empresas') || '[]')
+  constructor(private comunicacionService: ComunicacionService, protected contactoService: ContactoService){
+    if(localStorage.getItem('empresas') == null){
+      this.contactoService.setEmpresas().subscribe((json:any) => {
+        this.empresas = json
+        localStorage.setItem('empresas', JSON.stringify(this.empresas));
+      });
+      
+    }  
+    
+    
+  }
   ngOnInit(): void {
       this.comunicacionService.setTitulo(this.titulo)
   }

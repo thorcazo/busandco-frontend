@@ -24,7 +24,6 @@ button{
     grid-column: span 2;
     align-self: flex-end;
     justify-self: flex-end;
-    color: rgb(129, 0, 0);
     font-family: Urbanist;
     font-weight: semibold;
     border: 0;
@@ -39,10 +38,14 @@ button:hover{
     top: -25px;
     margin: 0px 50px 25px 50px;
 }
+@media(max-width: 1200px){
+    .cont-filtros{
+        top: -25px;
+    }
+}
 @media (max-width: 840px){
     .cont-filtros{
         grid-template-columns: repeat(3, 1fr);
-        top: -25px;
     }
     h3{
         grid-column: 1 / 4;

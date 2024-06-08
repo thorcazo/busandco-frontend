@@ -28,9 +28,6 @@ export class HorariosComponent implements OnInit{
   getParada(){
     return this.servicioLineaDetalle.getParada();
   }
-  quitarSegundos(hora:string){
-    return hora.substring(0,5);
-  }
   verHorarios() {
     this.servicioComunicacion.verHorarios();
   }

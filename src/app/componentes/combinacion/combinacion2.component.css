@@ -1,0 +1,129 @@
+@media(max-width: 1800px){
+    .arrow-right{
+        width: 53%;
+    }
+}
+@media(max-width: 1350px){
+    .arrow-right{
+        width: 53.5%;
+    }
+}
+@media(max-width: 1150px){
+    .paradas{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .origen, .destino{
+        grid-column: 1 / 4;
+    }
+    .destino{
+        grid-column: 1 / 4;
+    }
+    .arrow-right{
+        width: 52%;
+    }
+    .detalle-expandido{
+        height: 340px;
+    }
+}
+@media(max-width: 1000px){
+   .arrow{
+       width: 150px;
+   }
+   .arrow::before{
+       width: 150px;
+   }
+}
+@media(max-width: 950px){
+    .arrow-right{
+        width: 53%;
+    }
+}
+@media(max-width: 700px){
+    .arrow-right{
+        width: 54%;
+    }
+}
+@media(max-width: 900px){
+    .cont-flecha{
+        display: none;
+    }
+    .parada-origen{
+        grid-column: 1 / 4;
+    }
+    .parada-destino{
+        grid-column: 4 / 7;
+    }
+    .empresa{
+        display: none;
+    }
+    .linea-origen, .linea-destino{
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+}
+@media(max-width: 700px){
+    .arrow::before{
+        width: 100px;
+    }
+    .arrow{
+        width: 100px;
+    }
+}
+@media(max-width: 600px){
+    .arrow{
+        display: none;
+    }
+}
+@media(max-width: 500px){
+    .empresa{
+        display: none;
+    }
+    .header-linea{
+        justify-content: space-between;
+        gap: 0;
+    }
+    .parada-destino{
+        justify-self: center;
+    }
+    .linea{
+        font-size: 20px;
+    }
+    .parada{
+        font-size: 12px;
+    }
+    .boton-secundario{
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .chevron{
+        padding: 2px;
+    }
+    .paradas{
+        grid-template-columns:  1fr;
+    }
+    .origen, .destino{
+        grid-column: 1 / 2;
+        display: grid;
+        grid-template-columns: 10px 1fr;
+        grid-template-rows: auto;
+    }
+    .paradas-origen, .paradas-destino{
+        grid-template-columns: 1fr;
+    }
+    .trayecto{
+       grid-column: span 2;
+    }
+    .arrow-right{
+       display: none;
+    }
+    .arrow-down{
+        display: block;
+    }
+    .detalle-expandido{
+        height: 380px;
+    }
+    .det{
+        width: 100%;
+    }
+}

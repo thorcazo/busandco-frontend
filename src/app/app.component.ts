@@ -13,7 +13,13 @@ import { Subscription } from 'rxjs';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    localStorage.removeItem('empresas');
+    localStorage.removeItem('lineas');
+    localStorage.removeItem('incidencias');
+    localStorage.removeItem('paradas');
+  }
+
 
   ngOnInit() {
     this.router.events.subscribe((evt) => {

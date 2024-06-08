@@ -1,14 +1,20 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ComunicacionService {
-
+export class ComunicacionService{
+  resultados = false;
   mostrarHorarios:boolean = true;
   parada:any;
   titulo:string = 'Origen - Destino'
-  constructor() { }
+ 
+  setResultados(resultados:boolean) {
+    this.resultados = resultados;
+  }
+  getResultados() {
+    return this.resultados;
+  }
   verHorarios() {
     this.mostrarHorarios = true;
   }

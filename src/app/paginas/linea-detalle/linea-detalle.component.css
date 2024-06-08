@@ -90,7 +90,7 @@ header{
    }
 }
 
-@media(max-width: 600px){
+@media(max-width: 1200px){
     .cabecera-linea{
         top: -25px;
     }

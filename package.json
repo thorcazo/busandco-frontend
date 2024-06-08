@@ -19,6 +19,8 @@
     "@angular/platform-browser": "^17.0.0",
     "@angular/platform-browser-dynamic": "^17.0.0",
     "@angular/router": "^17.0.0",
+    "@auth0/angular-jwt": "^5.2.0",
+    "@formkit/tempo": "^0.1.1",
     "css.gg": "^2.1.1",
     "leaflet": "^1.9.4",
     "leaflet-routing-machine": "^3.2.12",
