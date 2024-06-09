@@ -10,7 +10,6 @@ import { Component, Input } from '@angular/core';
 export class IncidenciaComponent {
   @Input() incidencia: any;
   getLineasLength(){
-    console.log(this.incidencia.lineas.length)
     return this.incidencia.lineas.length
   }
 }

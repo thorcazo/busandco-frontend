@@ -285,7 +285,6 @@ export class OrigenDestinoService {
                             ),
                           },
                         });
-                        console.log(this.combinaciones);
                       }
                     });
                   } else {

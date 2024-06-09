@@ -63,8 +63,12 @@ header{
     gap: 20px;
 }
 .direccion-cambio button{
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 0 20px;
-    max-width: 200px;
+    max-width: 220px;
 }
 .direccion-nombre{
     font-size: 22px;

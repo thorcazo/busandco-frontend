@@ -7,7 +7,7 @@
                 </div>
                 <div class="campo contrasena">
                     <label for="password">Contraseña:</label>
-                    <input [(ngModel)]="this.password" type="password"  placeholder="Introduce tu contraseña">
+                    <input (keyup)="passwordEnter($event)" [(ngModel)]="this.password" type="password"  placeholder="Introduce tu contraseña">
                 </div>
                 <button (click)="login()" class="boton iniciar-sesion">Iniciar sesión</button>
                 @if(credencialesIncorrectas){

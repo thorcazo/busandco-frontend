@@ -5,8 +5,7 @@ import { inject } from '@angular/core';
 export const loginGuard: CanActivateFn = (route, state) => {
   const autenticacionService = inject(AutenticacionService);
   const router = inject(Router);
-  console.log(autenticacionService.getIsLoggedIn());
-  if (autenticacionService.getIsLoggedIn()) {
+  if (autenticacionService.isLoggedIn()) {
     return true;
   }
   else {

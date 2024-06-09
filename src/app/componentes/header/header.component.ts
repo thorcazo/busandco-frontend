@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit{
      this.titulo =  this.comunicacionService.getTitulo()
   }
   isLogged(){
-    return this.autenticacionService.getIsLoggedIn();
+    return this.autenticacionService.isLoggedIn();
   }
   logOut(){
     this.autenticacionService.logout();

@@ -56,9 +56,13 @@ a:hover{
     .enlace{
         display: none;
     }
+    thead tr th:nth-child(1){
+        padding: 0 6px;
+    }
     thead tr th:nth-child(3){
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
+        padding: 0 6px;
     }
     .boton-secundario{
         padding: 4px 10px;

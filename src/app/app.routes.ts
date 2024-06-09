@@ -77,5 +77,4 @@ export const routes: Routes = [
         component: Error404Component,
         pathMatch: 'full',
     },
-    
 ];

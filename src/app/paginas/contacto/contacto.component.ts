@@ -19,10 +19,7 @@ export class ContactoComponent implements OnInit{
         this.empresas = json
         localStorage.setItem('empresas', JSON.stringify(this.empresas));
       });
-      
     }  
-    
-    
   }
   ngOnInit(): void {
       this.comunicacionService.setTitulo(this.titulo)

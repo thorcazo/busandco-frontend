@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ComunicacionService } from '../../servicios/comunicacion.service';
 import { FormsModule } from '@angular/forms';
 import { AutenticacionService } from '../../servicios/autenticacion.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,24 +13,23 @@ import { AutenticacionService } from '../../servicios/autenticacion.service';
 })
 export class LoginComponent {
   titulo = 'Iniciar Sesión'
-  username?: string;
-  password?: string;
+  username = '';
+  password = '';
   credencialesIncorrectas: boolean = false;
   constructor(private comunicacionService: ComunicacionService, private autenticacionService: AutenticacionService) { 
     this.comunicacionService.setTitulo(this.titulo);
   }
+  passwordEnter(event: any){
+    if(event.keyCode === 13){
+      this.login();
+    }
+  }
   login(){
-    console.log(this.username);
-    console.log(this.password);
-    if(this.username && this.password){
+
       this.autenticacionService.login({username: this.username, password: this.password}).subscribe(
         data => {
-          console.log(data);
+          
         }
       );
-    }
-    // this.autenticacionService.loginFalso();
-    
-    
   }
 }

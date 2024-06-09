@@ -22,7 +22,7 @@
                 <div class="direccion">
                     <p class="direccion-nombre">{{direccion}}</p>
                     <div class="direccion-cambio">
-                        <button (click)="cambiarDireccion()" class="boton">Cambio de dirección</button>
+                        <button (click)="cambiarDireccion()" class="boton">Cambio de dirección <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" data-icon="SvgVerticalArrows" aria-hidden="true"><path d="M11.988 20.989V3.007m.006 17.977l2.781-2.784m-2.781 2.791L9.2 18.213m2.786-15.2l-2.762 2.8m2.762-2.811L14.8 5.767"></path></svg></button>
                         <p class="direccion-error" [class.active]="errorDireccion">Esta sublínea sólo tiene una dirección</p>
                     </div>
                 </div>

@@ -1,14 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+
 :root{
     /*Paleta de colores*/
     --amarillo: #FFD166;
     --verde: #06D6A0;
-    --azul-claro: #118AB2;
+    --azul-claro: #117286;
     --azul-oscuro: #073B4C;
     --blanco: #FFF;
     --negro: #000;
     --gris: #EEE;
-    --azul-hover: #117286;
+
 
     /*Fuentes*/
     @font-face {
@@ -41,13 +41,12 @@
         height: 48px;
         font-weight:600;
         font-family: Urbanist;
+        font-size: 16px;
         color: var(--azul-oscuro);
         background-color: var(--amarillo);
         border: 0;
         border-radius: 10px;
         transition: background-color 0.3s;
-        font-size: 16px;
-        
     }
     .boton:hover{
         cursor:pointer;
@@ -59,7 +58,6 @@
         color: var(--azul-oscuro);
         border: 2px solid var(--amarillo);
         font-weight:600;
-        /* padding: 10px 20px; */
         border-radius: 10px;
         font-family: Urbanist;
         font-size: 16px;
