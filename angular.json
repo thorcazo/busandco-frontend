@@ -15,7 +15,7 @@
           "options": {
             "outputPath": "dist/bus-and-co",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "main": "src/main.ts",  // Aquí estaba 'browser', se cambió a 'main'
             "polyfills": [
               "zone.js"
             ],
